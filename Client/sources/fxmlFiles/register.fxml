@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.RegisterController">
+    <children>
+        <BorderPane prefHeight="100.0" prefWidth="500.0" style="-fx-background-color: lightblue; -fx-background-radius: 5;">
+            <center>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Электронная библиотека" BorderPane.alignment="CENTER">
+                    <font>
+                        <Font name="Malgun Gothic Bold" size="32.0" />
+                    </font>
+                </Text>
+            </center>
+        </BorderPane>
+        <FlowPane prefHeight="400.0" prefWidth="500.0" AnchorPane.topAnchor="100.0">
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Регистрация">
+                    <FlowPane.margin>
+                        <Insets left="150.0" top="-100.0" />
+                    </FlowPane.margin>
+                    <font>
+                        <Font size="32.0" />
+                    </font>
+                </Text>
+                <BorderPane prefHeight="50.0" prefWidth="299.0">
+                    <FlowPane.margin>
+                        <Insets left="100.0" top="10.0" />
+                    </FlowPane.margin>
+                    <center>
+                        <TextField fx:id="reg_log_text_field" promptText="Логин" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font></TextField>
+                    </center>
+                </BorderPane>
+                <BorderPane prefHeight="50.0" prefWidth="300.0">
+                    <FlowPane.margin>
+                        <Insets left="100.0" />
+                    </FlowPane.margin>
+                    <center>
+                        <PasswordField fx:id="pass_reg_text_field" prefHeight="25.0" prefWidth="250.0" promptText="Введите пароль" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font></PasswordField>
+                    </center>
+                </BorderPane>
+            <BorderPane prefHeight="50.0" prefWidth="300.0">
+               <FlowPane.margin>
+                  <Insets left="100.0" />
+               </FlowPane.margin>
+               <center>
+                  <PasswordField fx:id="pass_reg_text_field_again" promptText="Еще раз пароль" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </PasswordField>
+               </center>
+            </BorderPane>
+                <Button fx:id="btn_reg" mnemonicParsing="false" onAction="#BtnRegClicked" prefWidth="100.0" style="-fx-background-color: lightblue; -fx-background-radius: 10;" text="Регистрация">
+                    <FlowPane.margin>
+                        <Insets left="200.0" top="25.0" />
+                    </FlowPane.margin>
+               <font>
+                  <Font size="13.0" />
+               </font>
+                </Button>
+            </children>
+            <padding>
+                <Insets top="100.0" />
+            </padding>
+        </FlowPane>
+    </children>
+</AnchorPane>

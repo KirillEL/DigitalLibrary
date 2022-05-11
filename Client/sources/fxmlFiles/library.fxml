@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" prefHeight="799.0" prefWidth="1200.0" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AppController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <FlowPane fx:id="header_pane" alignment="TOP_CENTER" maxWidth="1.7976931348623157E308" prefHeight="110.0" prefWidth="959.0">
+         <children>
+            <ImageView fx:id="logo_img" fitHeight="72.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../src/main/images/logo2.png" />
+               </image>
+               <FlowPane.margin>
+                  <Insets right="70.0" top="15.0" />
+               </FlowPane.margin>
+            </ImageView>
+            <Text layoutX="343.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Электронная библиотека">
+               <font>
+                  <Font name="System Italic" size="47.0" />
+               </font>
+               <FlowPane.margin>
+                  <Insets left="10.0" top="5.0" />
+               </FlowPane.margin>
+            </Text>
+            <Button fx:id="btn_leave" mnemonicParsing="false" onAction="#OnBtnLeavePressed" prefHeight="50.0" prefWidth="100.0" text="Выйти">
+               <FlowPane.margin>
+                  <Insets left="100.0" top="20.0" />
+               </FlowPane.margin>
+            </Button>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets left="-15.0" right="-15.0" top="-30.0" />
+         </VBox.margin>
+      </FlowPane>
+      <FlowPane prefHeight="162.0" prefWidth="959.0" prefWrapLength="0.0">
+         <VBox.margin>
+            <Insets top="-30.0" />
+         </VBox.margin>
+         <children>
+            <TextField id="textFieldId" fx:id="findTextField" onAction="#onEnterPressTextField" prefHeight="50.0" prefWidth="879.0" promptText="Введите название ">
+               <FlowPane.margin>
+                  <Insets top="50.0" />
+               </FlowPane.margin>
+               <font>
+                  <Font name="Consolas" size="20.0" />
+               </font>
+            </TextField>
+            <Button id="btn-find" fx:id="findBtn" mnemonicParsing="false" onAction="#onFindBtnClick" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: lightgray;" text="ПОИСК">
+               <font>
+                  <Font name="Tahoma Bold" size="14.0" />
+               </font>
+               <FlowPane.margin>
+                  <Insets left="100.0" top="50.0" />
+               </FlowPane.margin>
+            </Button>
+         </children>
+      </FlowPane>
+      <Pagination fx:id="Page_ination" prefHeight="450.0" prefWidth="1160.0">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </Pagination>
+   </children>
+</VBox>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: FFA07A;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AdminAddBookController">
+   <children>
+      <FlowPane prefHeight="50.0" prefWidth="300.0" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <TextField fx:id="nameBookField" prefWidth="300.0" promptText="Название книги" />
+         </children>
+      </FlowPane>
+      <FlowPane prefHeight="50.0" prefWidth="300.0" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="150.0">
+         <children>
+            <TextField fx:id="nameAuthorBookField" prefWidth="300.0" promptText="Имя автора" />
+         </children>
+      </FlowPane>
+      <FlowPane prefHeight="50.0" prefWidth="300.0" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="200.0">
+         <children>
+            <TextField fx:id="dataReleaseField" prefWidth="300.0" promptText="Дата выпуска" />
+         </children>
+      </FlowPane>
+      <FlowPane prefHeight="50.0" prefWidth="300.0" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="250.0">
+         <children>
+            <TextField fx:id="resourceField" prefWidth="300.0" promptText="Ссылка на ресурс" />
+         </children>
+      </FlowPane>
+      <FlowPane fx:id="headerPane" prefHeight="80.0" prefWidth="600.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Добавление книги">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <FlowPane.margin>
+                  <Insets left="225.0" top="25.0" />
+               </FlowPane.margin>
+            </Text>
+         </children>
+      </FlowPane>
+      <Button fx:id="addBookButton" layoutX="250.0" layoutY="331.0" mnemonicParsing="false" onAction="#onAddBookClicked" prefHeight="35.0" prefWidth="100.0" text="Добавить" />
+      <Text fx:id="text_error" fill="#ff1e1e" layoutX="239.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Проверьте данные">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
